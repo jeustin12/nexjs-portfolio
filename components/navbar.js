@@ -1,10 +1,13 @@
+import Link from 'next/link'
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <Link href="/">
+        <a className="navbar-brand">
           Simple Portfolio
         </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -18,31 +21,21 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
+            <li className="nav-item">
+            <Link href='/blog'>
+              <a className="nav-link">
+                Blog
               </a>
+            </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
+            <Link href="/github">
+              <a className="nav-link" >
+                Git Hub
               </a>
+            </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="#"
-                tabIndex="-1"
-                aria-disabled="true"
-              >
-                Disabled
-              </a>
-            </li>
+            
           </ul>
         </div>
       </div>
